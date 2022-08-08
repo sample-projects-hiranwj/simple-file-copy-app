@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pneContainer" prefHeight="300.0" prefWidth="500.0" stylesheets="@../css/main-form.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <JFXButton fx:id="btnSelectFile" layoutX="25.0" layoutY="67.0" onAction="#btnSelectFileOnAction" prefHeight="35.0" prefWidth="136.0" text="SELECT FILE" AnchorPane.leftAnchor="25.0" />
+      <Label fx:id="lblNameSize" layoutX="176.0" layoutY="77.0" text="No file selected">
+         <font>
+            <Font name="Ubuntu" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSelectDir" layoutX="25.0" layoutY="133.0" onAction="#btnSelectDirOnAction" prefHeight="35.0" prefWidth="136.0" text="SELECT DIRECTORY" textFill="WHITE" AnchorPane.leftAnchor="25.0" />
+      <Label fx:id="lblPath" layoutX="176.0" layoutY="143.0" text="No folder selected">
+         <font>
+            <Font name="Ubuntu" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCopy" layoutX="217.0" layoutY="261.0" onAction="#btnCopyOnAction" prefHeight="25.0" prefWidth="66.0" text="Copy" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="217.0">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font></JFXButton>
+      <Rectangle fx:id="pgbContainer" arcHeight="5.0" arcWidth="5.0" fill="#c9e3f8" height="15.0" layoutX="14.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+      <Rectangle fx:id="pgbLoad" arcHeight="5.0" arcWidth="5.0" fill="#5ef82f" height="15.0" layoutX="17.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="25.0" />
+      <Label fx:id="lblSize" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="419.0" layoutY="198.0" prefHeight="16.0" prefWidth="201.0" text="0 / 0 Kb" textAlignment="RIGHT" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProgress" layoutX="60.0" layoutY="189.0" prefHeight="16.0" prefWidth="201.0" text="Progress: 0%" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Ubuntu" size="13.0" />
+         </font>
+      </Label>
+      <FlowPane alignment="CENTER" layoutY="18.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label text="File Copy Application" textFill="#061346">
+               <font>
+                  <Font name="Ubuntu Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
